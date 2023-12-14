@@ -2,26 +2,30 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .about-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 70%;
+    width: 100%;
     text-align: justify;
     margin-top: 20px;
 }
-
+.about-main{
+    text-align: center;
+    font-size: 90px;
+}
 .banner-gif {
-    width: 100%; /* Ширина гифки занимает всю доступную ширину блока */
+    width: 100%;
     height: auto;
-    object-fit: cover; /* Заполняет блок, сохраняя пропорции */
+    object-fit: cover;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .about-text {
+    border-radius: 10px;
     flex: 1;
     margin-left: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -31,4 +35,23 @@
     transform: scale(1.05);
     transform: translateY(-5px);
     box-shadow: 0 0 10px rgba(0, 10, 10);
+}
+
+/* Adjustments for smaller screens (up to 767px) */
+@media only screen and (max-width: 767px) {
+    .about-main{
+        font-size: 30px;
+    }
+    #about-container {
+        font-size: 20px; /* Adjust the font size for smaller screens */
+    }
+
+    .about-section {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        width: 90%;
+    }
+
+    .about-text {
+        margin-left: 0;
+    }
 }

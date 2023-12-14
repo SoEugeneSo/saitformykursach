@@ -164,3 +164,8 @@ body {
         text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.9);
     }
 }
+@media only screen and (max-width: 600px) {
+    .bannere .zoom {
+        font-size: 50px;
+    } 
+}
