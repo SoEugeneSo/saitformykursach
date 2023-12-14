@@ -1,0 +1,180 @@
+main{
+    font-family: 'Comfortaa';
+}
+
+#banner {
+    width: 100%;
+    height:auto;
+    object-fit: cover;
+    filter: blur(10px);
+}
+#banner-container {
+    position: relative;
+    width: 100%;
+    max-height: 300px; /* Adjust the maximum height as needed */
+    overflow: hidden; /* Ensure overflow doesn't affect layout */
+}
+
+#text-container {
+    font-family: 'Comfortaa';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+h1 {
+    font-size: 100px;
+    color: white;
+    margin: 0;
+    padding: 20px;
+    display: inline-block;
+    animation: pulse 3s infinite alternate;
+}
+
+
+@keyframes pulse {
+    from {
+        font-size: 80px;
+        color: white;
+    }
+    to {
+        font-size: 90px;
+        color: red;
+    }
+}
+
+.project {
+    display: flex;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.project:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.568); /* Adjust the shadow values as needed */
+}
+
+.thumbnail-container {
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+}
+
+.thumbnail {
+    width: 100%;
+    height: auto;
+}
+.content {
+    display: flex;
+    align-items: center;
+}
+
+.image-container {
+    width: 225px;
+    margin-right: 20px;
+    height: 315px; 
+    transition: transform 0.3s ease-in-out;
+}
+.project:hover .image-container {
+    transform: translateY(-10px);
+}
+.thumbnail {
+    width: 100%;
+    height: auto;
+    max-width: 100%; /* Ensure images don't exceed container width */
+}
+
+
+iframe {
+    margin-left: 40px;
+    width: 560px; /* Adjust the width as needed */
+    height: 315px; /* Adjust the height as needed */
+    border: none; /* Remove the border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for a neat appearance */
+    transition: transform 0.3s ease-in-out;
+}
+.project:hover iframe {
+    transform: translateY(-10px);
+}
+.project-details {
+    flex: 1;
+    margin-left: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* White semi-transparent background */
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease-in-out;
+}
+.project:hover .project-details {
+    transform: translateY(-10px);
+}
+.social-icons {
+    margin-bottom: 10px;
+}
+.social-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+@media only screen and (max-width: 767px) {
+    #banner {
+        width: 100%; /* Adjust the width as needed */
+        max-height: 200px; /* Set a maximum height to control the size */
+        filter: blur(10px);
+    }
+    h1 {
+        font-size: 40px; /* Adjust the font size for smaller screens */
+    }
+    @keyframes pulse {
+        from {
+            font-size: 25px;
+            color: white;
+        }
+        to {
+            font-size: 35px;
+            color: red;
+        }
+    }
+    
+    .project {
+        flex-direction: column; /* Stack content vertically */
+        margin-bottom: 20px;
+        align-items: center; /* Center content horizontally */
+        text-align: center;
+    }
+
+    .content {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column; /* Stack poster and text block vertically */
+        align-items: center; /* Center content horizontally */
+        text-align: center; /* Center text within content */
+    }
+    .image-container {
+        width: 100%; /* Make poster fill the container width */
+        margin-right: 0; /* Remove margin for the poster */
+    }
+
+    .project-details {
+        flex: 1;
+        margin-left: 0; /* Remove margin for project details */
+        margin-top: 10px; /* Add spacing between poster and text block */
+        width: 100%; /* Make text block fill the container width */
+    }
+
+    iframe {
+        width: 100%; /* Make video fill the container width */
+        margin-left: 0;
+    }
+    h2 {
+        font-size: 24px; /* Adjust heading font size for project details */
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 14px; /* Adjust paragraph font size for project details */
+        margin-bottom: 10px;
+    }
+
+}
